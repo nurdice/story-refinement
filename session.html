@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Management</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./session-styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="userInfo" class="user-info">
+            <!-- User info will be displayed here -->
+        </div>
+
+        <!-- For registered users -->
+        <div id="registeredUserView" style="display: none;">
+            <div class="create-session">
+                <h2>Create New Session</h2>
+                <input type="text" id="sessionName" placeholder="Enter session name">
+                <button onclick="createSession()">Create Session</button>
+            </div>
+
+            <div class="previous-sessions">
+                <h2>Your Previous Sessions</h2>
+                <div id="sessionsList" class="sessions-list">
+                    <!-- Previous sessions will be listed here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- For guest users -->
+        <div id="guestUserView" style="display: none;">
+            <div class="join-session">
+                <h2>Join Session</h2>
+                <input type="text" id="sessionId" placeholder="Enter session ID">
+                <button onclick="joinSession()">Join Session</button>
+            </div>
+        </div>
+
+        <button onclick="logout()" class="logout-btn">Logout</button>
+    </div>
+    <script src="./shared-storage.js"></script>
+    <script src="./session.js"></script>
+</body>
+</html> 

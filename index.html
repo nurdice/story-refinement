@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-options">
+            <button onclick="showForm('register')">1. Register</button>
+            <button onclick="showForm('login')">2. Login with Email</button>
+            <button onclick="showForm('guest')">3. Guest Login</button>
+        </div>
+
+        <div class="form-container" id="registerForm" style="display: none;">
+            <h2>Register</h2>
+            <input type="text" id="regName" placeholder="Name">
+            <input type="email" id="regEmail" placeholder="Email">
+            <input type="password" id="regPassword" placeholder="Password">
+            <button onclick="register()">Create Account</button>
+        </div>
+
+        <div class="form-container" id="loginForm" style="display: none;">
+            <h2>Login</h2>
+            <input type="email" id="loginEmail" placeholder="Email">
+            <input type="password" id="loginPassword" placeholder="Password">
+            <button onclick="login()">Login</button>
+        </div>
+
+        <div class="form-container" id="guestForm" style="display: none;">
+            <h2>Guest Login</h2>
+            <input type="text" id="guestName" placeholder="Your Name">
+            <button onclick="guestLogin()">Enter as Guest</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html> 

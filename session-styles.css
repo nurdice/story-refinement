@@ -1,0 +1,42 @@
+.user-info {
+    background-color: #e3f2fd;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.create-session, .join-session, .previous-sessions {
+    margin-bottom: 2rem;
+}
+
+.sessions-list {
+    margin-top: 1rem;
+}
+
+.session-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.session-info {
+    flex-grow: 1;
+}
+
+.session-id {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.logout-btn {
+    background-color: #dc3545;
+    margin-top: 1rem;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+} 

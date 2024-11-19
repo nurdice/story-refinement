@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planning Session</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./session-room-styles.css">
+</head>
+<body>
+    <div class="session-container">
+        <!-- Session Info -->
+        <div class="session-header">
+            <h2>Session: <span id="sessionName"></span></h2>
+            <p>Session ID: <span id="sessionId"></span></p>
+        </div>
+
+        <div class="session-content">
+            <!-- Participants Panel -->
+            <div class="participants-panel">
+                <h3>Participants</h3>
+                <div class="participants-count">
+                    <span id="participantsCount">0</span> users in session
+                </div>
+                <div id="participantsList" class="participants-list">
+                    <!-- Participants will be listed here -->
+                </div>
+            </div>
+
+            <!-- Stories Panel -->
+            <div class="stories-panel">
+                <h3>Stories</h3>
+                <!-- Creator Controls -->
+                <div id="creatorControls" class="creator-controls" style="display: none;">
+                    <div class="add-story-form">
+                        <input type="text" id="storyName" placeholder="Enter story name">
+                        <button onclick="addStory()" class="add-story-btn">Add Story</button>
+                    </div>
+                </div>
+                <div id="storiesList" class="stories-list">
+                    <!-- Stories will be listed here -->
+                </div>
+            </div>
+
+            <!-- Estimation Panel -->
+            <div id="estimationPanel" class="estimation-panel" style="display: none;">
+                <!-- Estimation content -->
+            </div>
+        </div>
+    </div>
+    <script src="./shared-storage.js"></script>
+    <script src="./session-room.js"></script>
+</body>
+</html> 
